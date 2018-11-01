@@ -129,18 +129,28 @@ public interface IConstantFactory {
     List<Integer> getParentDeptIds(Integer deptid);
 
     /**
-     * 通过book id获取book名称
+     * 根据bookId获取bookName
      */
-    String getSingleBookName(Integer bookId);
-
     String getBookName(Integer id);
 
+    /**
+     * 根据bookId获取bookAuth
+     */
     String getBookAuth(Integer id);
 
+    /**
+     * 根据bookId获取bookDesc
+     */
     String getBookDesc(Integer id);
 
+    /**
+     * 根据bookId获取bookPrice
+     */
     String getBookPrice(Integer id);
 
+    /**
+     * 根据bookId获取bookDate
+     */
     String getBookDate(Integer id);
 
 }

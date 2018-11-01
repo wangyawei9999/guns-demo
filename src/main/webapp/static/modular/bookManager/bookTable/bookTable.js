@@ -85,6 +85,12 @@ BookTable.delete = function () {
     }
 };
 
+// 重置搜索
+BookTable.resetSearch = function () {
+    $("#bookName").val("");
+    BookTable.search();
+}
+
 /**
  * 查询书籍管理列表
  */

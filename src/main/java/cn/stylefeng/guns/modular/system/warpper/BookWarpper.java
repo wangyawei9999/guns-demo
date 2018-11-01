@@ -33,7 +33,6 @@ public class BookWarpper extends BaseControllerWrapper {
         map.put("bookDesc", ConstantFactory.me().getBookDesc((Integer) map.get("id")));
         map.put("bookPrice", ConstantFactory.me().getBookPrice((Integer) map.get("id")));
         map.put("bookDate", ConstantFactory.me().getBookDate((Integer) map.get("id")));
-//        map.put("deptName", ConstantFactory.me().getDeptName((Integer) map.get("deptid")));
     }
 
 }

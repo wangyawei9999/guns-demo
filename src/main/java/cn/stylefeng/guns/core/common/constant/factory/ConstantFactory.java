@@ -349,21 +349,8 @@ public class ConstantFactory implements IConstantFactory {
     }
 
     /**
-     * 通过book id获取book名称
+     * 通过bookId获取bookName
      */
-    @Override
-    @Cacheable(value = Cache.CONSTANT, key = "'" + CacheKey.SINGLE_BOOK_NAME + "'+#bookId")
-    public String getSingleBookName(Integer bookId) {
-        if (0 == bookId) {
-            return "--";
-        }
-        BookTable bookTableObj = bookTableMapper.selectById(bookId);
-        if (ToolUtil.isNotEmpty(bookTableObj) && ToolUtil.isNotEmpty(bookTableObj.getBookName())) {
-            return bookTableObj.getBookName();
-        }
-        return "";
-    }
-
     @Override
     public String getBookName(Integer id) {
         BookTable bookTable = bookTableMapper.selectById(id);
@@ -374,6 +361,9 @@ public class ConstantFactory implements IConstantFactory {
         }
     }
 
+    /**
+     * 根据bookId获取bookAuth
+     */
     @Override
     public String getBookAuth(Integer id) {
         BookTable bookTable = bookTableMapper.selectById(id);
@@ -384,6 +374,9 @@ public class ConstantFactory implements IConstantFactory {
         }
     }
 
+    /**
+     * 根据bookId获取bookDesc
+     */
     @Override
     public String getBookDesc(Integer id) {
         BookTable bookTable = bookTableMapper.selectById(id);
@@ -394,6 +387,9 @@ public class ConstantFactory implements IConstantFactory {
         }
     }
 
+    /**
+     * 根据bookId获取bookPrice
+     */
     @Override
     public String getBookPrice(Integer id) {
         BookTable bookTable = bookTableMapper.selectById(id);
@@ -404,6 +400,9 @@ public class ConstantFactory implements IConstantFactory {
         }
     }
 
+    /**
+     * 根据bookId获取bookDate
+     */
     @Override
     public String getBookDate(Integer id) {
         BookTable bookTable = bookTableMapper.selectById(id);
